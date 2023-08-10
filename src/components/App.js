@@ -49,7 +49,27 @@ function App() {
   }
 
   const submit = () => {
-    console.log(filter)
+    const newFilter = {
+      positions: [filter.pos1, filter.pos2, filter.pos3, filter.pos4, filter.pos5],
+      include: filter.include.padEnd(5, '_').split(''),
+      exclude: filter.exclude,
+      char1Exclude: filter.char1Exclude,
+      char2Exclude: filter.char2Exclude,
+      char3Exclude: filter.char3Exclude,
+      char4Exclude: filter.char4Exclude,
+      char5Exclude: filter.char5Exclude
+    };
+
+    for (let i = 0; i <= newFilter.positions.length-1; i++) {
+      if (newFilter.positions[i] === "") {
+        newFilter.positions[i] = "_"
+      }
+    };
+
+
+
+
+    console.log(newFilter)
     // shape data for API here
     // call getWords api function here with shaped data
   }
