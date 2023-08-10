@@ -2,11 +2,11 @@ import React from "react";
 
 
 function WordsList(props) {
-
+    const { words } = props;
 
     return (
         <div>
-            WORDS LIST
+            {words.map((ele) => ele.word)}
         </div>
     )
 };

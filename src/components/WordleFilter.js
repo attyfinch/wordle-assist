@@ -1,8 +1,6 @@
 import React from "react";
 
 
-
-
 export default function WordleFilter(props) {
     const {change, filter, submit} = props;
 

@@ -16,6 +16,7 @@ import WordsList from './WordsList';
 */
 
 const url = process.env.REACT_APP_API
+const local = process.env.REACT_APP_LOCAL
 
 const initialFilterValues = {
   pos1: "", 
@@ -38,7 +39,15 @@ function App() {
   const [filter, setFilter] = useState(initialFilterValues);
   const [wordsList, setWordsList] = useState(initialWordsList);
 
-  // getWords function
+  const getWords = (wordFilter) => {
+    axios.post(url, wordFilter)
+      .then((res) => {
+        setWordsList(res.data.wordlist)
+      })
+      .catch((err) => {
+        console.log(err.message)
+      })
+  } 
 
   const change = (name, value) => {
     // Do form validation here
@@ -65,11 +74,9 @@ function App() {
         newFilter.positions[i] = "_"
       }
     };
-
-
-
-
     console.log(newFilter)
+    getWords(newFilter)
+    console.log(wordsList.map((ele) => ele.word))
     // shape data for API here
     // call getWords api function here with shaped data
   }
@@ -78,7 +85,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <WordleFilter change={change} filter={filter} submit={submit} />
-        <WordsList />
+        <WordsList words={wordsList} />
       </header>
     </div>
   );
