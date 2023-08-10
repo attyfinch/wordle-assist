@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import '../App.css';
 import axios from 'axios';
 
+import WordleFilter from './WordleFilter';
+import WordsList from './WordsList';
+
 /*
   1. Initial Form Values
   2. State to manage the changes
@@ -12,8 +15,8 @@ import axios from 'axios';
   Component for words
 */
 
-// const url = process.env.API
-// const local = process.env.LOCAL
+const url = process.env.REACT_APP_API
+// const local = process.env.REACT_APP_LOCAL
 
 const initialFilterValues = {
   positions: ['_', '_', '_', '_', '_'],
@@ -24,12 +27,14 @@ const initialFilterValues = {
   char3Exclude: "",
   char4Exclude: "",
   char5Exclude: ""
-}
+};
+
+const initialWordsList = [];
 
 function App() {
   const [word, setWord] = useState('')
 
-  axios.get()
+  axios.get(url)
   .then((res) => {
     setWord(res.data.word)
   })
@@ -41,9 +46,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          {word}
-        </p>
+        <WordleFilter />
+        <WordsList />
       </header>
     </div>
   );
