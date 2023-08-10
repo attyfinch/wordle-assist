@@ -16,11 +16,14 @@ import WordsList from './WordsList';
 */
 
 const url = process.env.REACT_APP_API
-// const local = process.env.REACT_APP_LOCAL
 
 const initialFilterValues = {
-  positions: ['_', '_', '_', '_', '_'],
-  include: ['_', '_', '_', '_', '_'],
+  pos1: "", 
+  pos2: "",
+  pos3: "",
+  pos4: "",
+  pos5: "",
+  include: "",
   exclude: "",
   char1Exclude: "",
   char2Exclude: "",
@@ -32,21 +35,29 @@ const initialFilterValues = {
 const initialWordsList = [];
 
 function App() {
-  const [word, setWord] = useState('')
+  const [filter, setFilter] = useState(initialFilterValues);
+  const [wordsList, setWordsList] = useState(initialWordsList);
 
-  axios.get(url)
-  .then((res) => {
-    setWord(res.data.word)
-  })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
-  })
+  // getWords function
 
+  const change = (name, value) => {
+    // Do form validation here
+    setFilter({
+      ...filter,
+      [name]: value
+    })
+  }
+
+  const submit = () => {
+    console.log(filter)
+    // shape data for API here
+    // call getWords api function here with shaped data
+  }
+  
   return (
     <div className="App">
       <header className="App-header">
-        <WordleFilter />
+        <WordleFilter change={change} filter={filter} submit={submit} />
         <WordsList />
       </header>
     </div>
