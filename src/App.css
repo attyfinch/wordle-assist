@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+.position {
+  width: 20px;
+}
+
+.included {
+  width: 100px;
+}
+
+.eliminated {
+  width: 100px;
+}
+
+.words {
+  padding: 2%;
+}
+
+.wordlist {
+  flex-wrap: wrap;
+}
+
+
+

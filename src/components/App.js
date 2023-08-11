@@ -76,7 +76,7 @@ function App() {
     };
     console.log(newFilter)
     getWords(newFilter)
-    console.log(wordsList.map((ele) => ele.word))
+    console.log(wordsList)
     // shape data for API here
     // call getWords api function here with shaped data
   }
@@ -85,7 +85,16 @@ function App() {
     <div className="App">
       <header className="App-header">
         <WordleFilter change={change} filter={filter} submit={submit} />
-        <WordsList words={wordsList} />
+      <div>
+        {
+          wordsList.map((word, idx) => {
+            return (
+              <WordsList word={word.word} key={word.idx}/>
+            )
+          })
+        }
+      </div>
+        
       </header>
     </div>
   );
