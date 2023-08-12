@@ -19,15 +19,14 @@ export default function WordleFilter(props) {
         <div>
             <form onSubmit={onSubmit}>
                 <div>
-                    <div>Letters Found</div>
-                    <div >
-                        <label>
+                    <div>
+                        <label> Letters Found
                             <input
                                 value={filter.pos1}
                                 onChange={onChange}
                                 name='pos1'
                                 type='text'
-                                className="position"
+                                className="position-input"
                             />
                         </label>
                         <label>
@@ -36,7 +35,7 @@ export default function WordleFilter(props) {
                                 onChange={onChange}
                                 name='pos2'
                                 type='text'
-                                className="position"
+                                className="position-input"
                             />
                         </label>
                         <label>
@@ -45,7 +44,7 @@ export default function WordleFilter(props) {
                                 onChange={onChange}
                                 name='pos3'
                                 type='text'
-                                className="position"
+                                className="position-input"
                             />
                         </label>
                         <label>
@@ -54,7 +53,7 @@ export default function WordleFilter(props) {
                                 onChange={onChange}
                                 name='pos4'
                                 type='text'
-                                className="position"
+                                className="position-input"
                             />
                         </label>
                         <label>
@@ -63,104 +62,99 @@ export default function WordleFilter(props) {
                                 onChange={onChange}
                                 name='pos5'
                                 type='text'
-                                className="position"
+                                className="position-input"
                             />
                         </label>
                     </div>
                 </div>
 
                 <div>
-                    <div>Letters Included</div>
-                    <label>
+                    <label>Letters Included
                         <input
                             value={filter.include}
                             onChange={onChange}
                             name='include'
                             type='text'
-                            className="included"
+                            className="regular-input"
                         />
                     </label>
                 <div/>
 
                 <div>
-                    <div>Letters Eliminated</div>
-                    <label>
+                    <label>Letters Eliminated
                         <input
                             value={filter.exclude}
                             onChange={onChange}
                             name='exclude'
                             type='text'
-                            className="eliminated"
+                            className="regular-input"
                         />
                     </label>
                 </div>
 
                 <div>
-                    <div>Exlude - 1st Position</div>
-                    <label>
+                    <label>Exclude 1st Letter
                         <input
                             value={filter.char1Exclude}
                             onChange={onChange}
                             name='char1Exclude'
                             type='text'
+                            className="regular-input"
                         />
                     </label>
                 </div>
 
                 <div>
-                    <div>Exlude - 2nd Position</div>
-                    <label>
+                    <label>Exclude 2nd Letter
                         <input
                             value={filter.char2Exclude}
                             onChange={onChange}
                             name='char2Exclude'
                             type='text'
+                            className="regular-input"
                         />
                     </label>
                 </div>   
 
                 <div>
-                    <div>Exlude - 3rd Position</div>
-                    <label>
+                    <label>Exclude 3rd Letter
                         <input
                             value={filter.char3Exclude}
                             onChange={onChange}
                             name='char3Exclude'
                             type='text'
+                            className="regular-input"
                         />
                     </label>
                 </div>               
                 
                 <div>
-                    <div>Exlude - 4th Position</div>
-                    <label>
+                    <div></div>
+                    <label> Exclude 4th Letter
                         <input
                             value={filter.char4Exclude}
                             onChange={onChange}
                             name='char4Exclude'
                             type='text'
+                            className="regular-input"
                         />
                     </label>
                 </div>
 
                 <div>
-                    <div>Exlude - 5th Position</div>
-                    <label>
+                    <div></div>
+                    <label>Exclude 5th Letter
                         <input
                             value={filter.char5Exclude}
                             onChange={onChange}
                             name='char5Exclude'
                             type='text'
+                            className="regular-input"
                         />
                     </label>
                 </div>   
-        
-
-
             </div>
-
-
-                <button>Get Words</button>
+                <button className="button">Get Words</button>
             </form>
         </div>
     )

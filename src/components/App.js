@@ -83,19 +83,21 @@ function App() {
   
   return (
     <div className="App">
-      <header className="App-header">
+      <header>
+        <div>WordleAssist</div>
+      </header>
         <WordleFilter change={change} filter={filter} submit={submit} />
-      <div>
+      <div className='wordlist'>
         {
           wordsList.map((word, idx) => {
             return (
-              <WordsList word={word.word} key={word.idx}/>
+              <WordsList word={word.word} id={idx}/>
             )
           })
         }
       </div>
         
-      </header>
+      
     </div>
   );
 }
