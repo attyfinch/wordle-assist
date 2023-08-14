@@ -143,9 +143,9 @@ export default function WordleFilter(props) {
                         
                     </div>            
                 </div>
-                  
-            
-                <button className="button">Get Words</button>
+                <div className="button-container">
+                    <button className="button">Get Words</button>
+                </div>  
             </form>
         </div>
     )
