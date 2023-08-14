@@ -149,7 +149,7 @@ h4 {
   
   .position-input {
     width: 4%;
-    font-size: calc(10px + 3vmin);
+    font-size: calc(10px + 2vmin);
     text-align: center;
     margin-left: 3%;
   }
