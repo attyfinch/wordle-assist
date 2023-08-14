@@ -222,7 +222,8 @@ h4 {
   }
   
   .button {
-    display: inline-block;
+    /* display: inline-block; */
+    display: flex;
     margin: 2.5%;
     padding: 3%;
     font-size: calc(10px + 2vmin);
