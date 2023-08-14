@@ -127,7 +127,7 @@ h4 {
 
 /* mobile media query */
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 390px) {
   .App {
     background-color: #282c34;
     min-height: 100vh;
