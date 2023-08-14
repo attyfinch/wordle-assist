@@ -224,6 +224,7 @@ h4 {
   .button {
     /* display: inline-block; */
     display: flex;
+    flex-wrap: nowrap;
     margin: 2.5%;
     padding: 3%;
     font-size: calc(10px + 2vmin);
