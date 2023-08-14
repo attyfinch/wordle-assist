@@ -5,16 +5,6 @@ import axios from 'axios';
 import WordleFilter from './WordleFilter';
 import WordsList from './WordsList';
 
-/*
-  1. Initial Form Values
-  2. State to manage the changes
-  3. Yup form validation
-  4. Form errors
-
-  Component for form
-  Component for words
-*/
-
 const url = process.env.REACT_APP_API
 const local = process.env.REACT_APP_LOCAL
 
@@ -34,14 +24,17 @@ const initialFilterValues = {
 };
 
 const initialWordsList = [];
+const initialWordCount = null;
 
 function App() {
   const [filter, setFilter] = useState(initialFilterValues);
   const [wordsList, setWordsList] = useState(initialWordsList);
+  const [wordCount, setWordCount] = useState(initialWordCount)
 
   const getWords = (wordFilter) => {
     axios.post(url, wordFilter)
       .then((res) => {
+        setWordCount(res.data.wordsReturned)
         setWordsList(res.data.wordlist)
       })
       .catch((err) => {
@@ -72,26 +65,45 @@ function App() {
     for (let i = 0; i <= newFilter.positions.length-1; i++) {
       if (newFilter.positions[i] === "") {
         newFilter.positions[i] = "_"
+      } else {
+        newFilter.positions[i] = newFilter.positions[i].toUpperCase();
       }
     };
+
+    for (let i = 0; i <= newFilter.include.length-1; i++) {
+      if (newFilter.include[i] !== "_") {
+        newFilter.include[i] = newFilter.include[i].toUpperCase();
+      } 
+    };
+
+    newFilter.exclude = newFilter.exclude.toUpperCase();
+    newFilter.char1Exclude = newFilter.char1Exclude.toUpperCase();
+    newFilter.char2Exclude = newFilter.char2Exclude.toUpperCase();
+    newFilter.char3Exclude = newFilter.char3Exclude.toUpperCase();
+    newFilter.char4Exclude = newFilter.char4Exclude.toUpperCase();
+    newFilter.char5Exclude = newFilter.char5Exclude.toUpperCase();
+
     console.log(newFilter)
     getWords(newFilter)
-    console.log(wordsList)
-    // shape data for API here
-    // call getWords api function here with shaped data
   }
   
   return (
     <div className="App">
       <header>
-        <div>WordleAssist</div>
+        <div className='headerLogo'>
+          <div>Wordle</div><div className='colorHead'>Assist</div>
+        </div>
+        <div>
+          ??
+        </div>
       </header>
         <WordleFilter change={change} filter={filter} submit={submit} />
+      <div>{!wordCount ? "Submit filter for words" : `${wordCount} available words`}</div>
       <div className='wordlist'>
         {
           wordsList.map((word, idx) => {
             return (
-              <WordsList word={word.word} id={idx}/>
+              <WordsList word={word.word} id={idx} wordCount={wordCount}/>
             )
           })
         }

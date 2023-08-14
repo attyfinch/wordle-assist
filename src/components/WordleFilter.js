@@ -19,7 +19,7 @@ export default function WordleFilter(props) {
         <div>
             <form onSubmit={onSubmit}>
                 <div>
-                    <label> Letters Found
+                    <label className='posLabel' > Letters Found
                     <input
                         value={filter.pos1}
                         onChange={onChange}
@@ -27,6 +27,7 @@ export default function WordleFilter(props) {
                         type='text'
                         className="position-input"
                         id="pos1"
+                        
                     />
                 </label>
                 <label>
