@@ -26,6 +26,7 @@ export default function WordleFilter(props) {
                         type='text'
                         className="position-input"
                         id="pos1"
+                        maxLength={1}
                     />
                 </label>
                 <label>
@@ -35,6 +36,7 @@ export default function WordleFilter(props) {
                         name='pos2'
                         type='text'
                         className="position-input"
+                        maxLength={1}
                     />
                 </label>
                 <label>
@@ -44,6 +46,7 @@ export default function WordleFilter(props) {
                         name='pos3'
                         type='text'
                         className="position-input"
+                        maxLength={1}
                     />
                 </label>
                 <label>
@@ -53,6 +56,7 @@ export default function WordleFilter(props) {
                         name='pos4'
                         type='text'
                         className="position-input"
+                        maxLength={1}
                     />
                 </label>
                 <label>
@@ -62,6 +66,7 @@ export default function WordleFilter(props) {
                         name='pos5'
                         type='text'
                         className="position-input"
+                        maxLength={1}
                     />
                 </label>                
                 </div>                
@@ -72,6 +77,7 @@ export default function WordleFilter(props) {
                         name='include'
                         type='text'
                         className="include-input"
+                        maxLength={5}
                     />                
                 <div className="exclude">
                     <h4>Exclude Letters</h4>
@@ -83,6 +89,7 @@ export default function WordleFilter(props) {
                                 name='exclude'
                                 type='text'
                                 className="exclude-input"
+                                maxLength={15}
                             />
                     </div>
                     <div className="excludeByLetter">
@@ -93,6 +100,7 @@ export default function WordleFilter(props) {
                                 name='char1Exclude'
                                 type='text'
                                 className="exLetter"
+                                maxLength={5}
                             />
                         <label for="char2Exclude">L2</label>
                             <input
@@ -101,6 +109,7 @@ export default function WordleFilter(props) {
                                 name='char2Exclude'
                                 type='text'
                                 className="exLetter"
+                                maxLength={5}
                             />
                         <label for="char3Exclude">L3</label>   
                             <input
@@ -109,6 +118,7 @@ export default function WordleFilter(props) {
                                 name='char3Exclude'
                                 type='text'
                                 className="exLetter"
+                                maxLength={5}
                             />
                     </div>
                     <div className="excludeByLetter">
@@ -119,6 +129,7 @@ export default function WordleFilter(props) {
                                 name='char4Exclude'
                                 type='text'
                                 className="exLetter"
+                                maxLength={5}
                             />
                         <label for="char5Exclude">L5</label>
                             <input
@@ -127,11 +138,12 @@ export default function WordleFilter(props) {
                                 name='char5Exclude'
                                 type='text'
                                 className="exLetter"
+                                maxLength={5}
                             />
                     </div>            
                 </div>
                 <div className="button-container">
-                    <button className="button">Get Words</button>
+                    <button className="button">Submit</button>
                 </div>  
             </form>
         </div>

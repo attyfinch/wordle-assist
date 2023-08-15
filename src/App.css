@@ -207,11 +207,11 @@ h4 {
   
   .excludeByLetter {
     font-size: calc(10px + 2vmin); 
-    margin: 3% 0% 3% 2%;
+    margin: 3% 0% 2% 2%;
   }
   
   .exLetter {
-    width: 16%;
+    width: 17%;
     font-size: calc(10px + 2vmin);
     margin: 0 4.2% 0 2%;
   }
@@ -236,13 +236,15 @@ h4 {
   }
   
   .button {
+    width: 32%;
     display: flex;
     flex-wrap: nowrap;
     margin: 3%;
     padding: 3%;
     font-size: calc(10px + 2vmin);
+    font-weight: bold;
     cursor: pointer;
-    text-align: center;
+    justify-content: center;
     text-decoration: none;
     outline: none;
     color: #fff;
@@ -250,6 +252,7 @@ h4 {
     border: none;
     border-radius: 10px;
     box-shadow: 0 2.5px rgb(201, 193, 193);
+    
   }
   
   .button:hover {background-color: #4CAF50}
