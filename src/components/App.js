@@ -69,8 +69,9 @@ function App() {
   }
 
   const submit = () => {
+    setWordsList(initialWordsList)
     setLoading(true)
-
+    
     const newFilter = {
       positions: [filter.pos1, filter.pos2, filter.pos3, filter.pos4, filter.pos5],
       include: filter.include.padEnd(5, '_').split(''),
