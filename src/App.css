@@ -138,19 +138,29 @@ h4 {
     color: white;
   }
   header {
-    width: 96%;
+    width:  97%;
     display: flex;
     justify-content: space-between;
   }
 
   .headerLogo {
     display: inline-flex;
-    /* display: flex; */
     flex-direction: row;
     align-items: flex-start;
     font-size: calc(10px + 4vmin);
     margin: 2%;
     font-weight: bold;
+  }
+
+  .about {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 2%;
+  }
+  
+  .about img {
+    width: 50%;
   }
 
   .colorHead {

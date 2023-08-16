@@ -3,6 +3,8 @@ import '../App.css';
 import axios from 'axios';
 import BeatLoader from "react-spinners/BeatLoader";
 
+import about from '../about-50.png'
+
 import WordleFilter from './WordleFilter';
 import WordsList from './WordsList';
 
@@ -114,8 +116,8 @@ function App() {
         <div className='headerLogo'>
           <div>Wordle</div><div className='colorHead'>Assist</div>
         </div>
-        <div>
-          ??
+        <div className='about'>
+          <img src={about} alt='about' />
         </div>
       </header>
         <WordleFilter change={change} filter={filter} submit={submit} />
