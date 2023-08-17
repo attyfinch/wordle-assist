@@ -56,7 +56,15 @@ function App() {
     axios.post(url, wordFilter)
       .then((res) => {
         setLoading(false)
-        setWordCount(`${numberFormat(res.data.wordsReturned)} available words`)
+
+        if (res.data.wordsReturned === 0) {
+          setWordCount(`No words available based on submitted info`)  
+        } else if (res.data.wordsReturned === 1) {
+          setWordCount(`${numberFormat(res.data.wordsReturned)} available word`)  
+        } else {
+          setWordCount(`${numberFormat(res.data.wordsReturned)} available words`)
+        }
+
         setWordsList(res.data.wordlist)
       })
       .catch((err) => {
@@ -118,9 +126,7 @@ function App() {
         <div className='headerLogo'>
           <div>Wordle</div><div className='colorHead'>Assist</div>
         </div>
-        <div className='about'>
-          <Link to='/about' ><img src={infoIcon} alt='about'/></Link>
-        </div>
+        <Link to='/about' className='about'><img src={infoIcon} alt='info`'/></Link> 
       </header>
       <Routes >
         <Route exact path="/about" element={<About/>} />
@@ -128,7 +134,7 @@ function App() {
           <div>
             <WordleFilter change={change} filter={filter} submit={submit} />
             <div className='wordcount'>
-              <div className='message'>{loading === false ? wordCount : <BeatLoader color="rgba(255, 255, 255, 1)" size={18} loading={loading}/>}</div>
+              <div>{loading === false ? wordCount : <BeatLoader color="rgba(255, 255, 255, 1)" size={18} loading={loading}/>}</div>
             </div>
             <div className='wordlist'>
               {

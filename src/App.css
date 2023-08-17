@@ -141,6 +141,7 @@ h4 {
     width:  97%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   .headerLogo {
@@ -158,8 +159,13 @@ h4 {
     align-items: center;
     margin: 2%;
   }
-  
-  .about img {
+
+  Link {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  header img {
     width: 50%;
   }
 
@@ -264,16 +270,11 @@ h4 {
     
   }
 
-  /* .message {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-  } */
-
   .wordlist {
     display: flex;
     width: 90%;
-    margin: 2% 2% 0 2%;
+    margin: 2% 2% 2% 5%;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
