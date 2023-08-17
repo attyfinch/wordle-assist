@@ -27,6 +27,7 @@ export default function WordleFilter(props) {
                         className="position-input"
                         id="pos1"
                         maxLength={1}
+                        autoComplete='off'
                     />
                 </label>
                 <label>
@@ -37,6 +38,7 @@ export default function WordleFilter(props) {
                         type='text'
                         className="position-input"
                         maxLength={1}
+                        autoComplete='off'
                     />
                 </label>
                 <label>
@@ -47,6 +49,7 @@ export default function WordleFilter(props) {
                         type='text'
                         className="position-input"
                         maxLength={1}
+                        autoComplete='off'
                     />
                 </label>
                 <label>
@@ -57,6 +60,7 @@ export default function WordleFilter(props) {
                         type='text'
                         className="position-input"
                         maxLength={1}
+                        autoComplete='off'
                     />
                 </label>
                 <label>
@@ -67,6 +71,7 @@ export default function WordleFilter(props) {
                         type='text'
                         className="position-input"
                         maxLength={1}
+                        autoComplete='off'
                     />
                 </label>                
                 </div>                
@@ -78,6 +83,7 @@ export default function WordleFilter(props) {
                         type='text'
                         className="include-input"
                         maxLength={5}
+                        autoComplete='off'
                     />                
                 <div className="exclude">
                     <h4>Exclude Letters</h4>
@@ -90,6 +96,7 @@ export default function WordleFilter(props) {
                                 type='text'
                                 className="exclude-input"
                                 maxLength={15}
+                                autoComplete='off'
                             />
                     </div>
                     <div className="excludeByLetter">
@@ -101,6 +108,7 @@ export default function WordleFilter(props) {
                                 type='text'
                                 className="exLetter"
                                 maxLength={5}
+                                autoComplete='off'
                             />
                         <label for="char2Exclude">L2</label>
                             <input
@@ -110,6 +118,7 @@ export default function WordleFilter(props) {
                                 type='text'
                                 className="exLetter"
                                 maxLength={5}
+                                autoComplete='off'
                             />
                         <label for="char3Exclude">L3</label>   
                             <input
@@ -119,6 +128,7 @@ export default function WordleFilter(props) {
                                 type='text'
                                 className="exLetter"
                                 maxLength={5}
+                                autoComplete='off'
                             />
                     </div>
                     <div className="excludeByLetter">
@@ -130,6 +140,7 @@ export default function WordleFilter(props) {
                                 type='text'
                                 className="exLetter"
                                 maxLength={5}
+                                autoComplete='off'
                             />
                         <label for="char5Exclude">L5</label>
                             <input
@@ -139,6 +150,7 @@ export default function WordleFilter(props) {
                                 type='text'
                                 className="exLetter"
                                 maxLength={5}
+                                autoComplete='off'
                             />
                     </div>            
                 </div>
