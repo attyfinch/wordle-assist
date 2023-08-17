@@ -191,7 +191,6 @@ h4 {
     margin-top: 3%;
   }
   
-  
   /* Exclusion Section Styling */ 
   .exclude {
     margin-top: 5%;
@@ -259,19 +258,31 @@ h4 {
     transform: translateY(4px);
   }
   
+  .wordcount {
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  /* .message {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  } */
+
   .wordlist {
     display: flex;
-    width: 80%;
+    width: 90%;
     margin: 2% 2% 0 2%;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
     
   }
   
   .word {
     margin: 4%;
   }
-
 
 }
 

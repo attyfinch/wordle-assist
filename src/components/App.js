@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import '../App.css';
 import axios from 'axios';
+import { Route, Routes, Link } from 'react-router-dom'
+import About from './About';
 import BeatLoader from "react-spinners/BeatLoader";
 
-import about from '../about-50.png'
+import infoIcon from '../about-50.png'
 
 import WordleFilter from './WordleFilter';
 import WordsList from './WordsList';
@@ -26,7 +28,7 @@ const initialFilterValues = {
 };
 
 const initialWordsList = [];
-const initialWordCount = "Submit filter to see available words";
+const initialWordCount = "Submit filter to find available words";
 
 function App() {
   const [filter, setFilter] = useState(initialFilterValues);
@@ -117,23 +119,29 @@ function App() {
           <div>Wordle</div><div className='colorHead'>Assist</div>
         </div>
         <div className='about'>
-          <img src={about} alt='about' />
+          <Link to='/about' ><img src={infoIcon} alt='about'/></Link>
         </div>
       </header>
-        <WordleFilter change={change} filter={filter} submit={submit} />
-      <div>{loading === false ? wordCount : <BeatLoader color="rgba(255, 255, 255, 1)" size={18} loading={loading}/>}</div>
-      <div></div>
-      <div className='wordlist'>
-        {
-          wordsList.map((word, idx) => {
-            return (
-              <WordsList word={word.word} id={idx} wordCount={wordCount}/>
-            )
-          })
-        }
-      </div>
-        
-      
+      <Routes >
+        <Route exact path="/about" element={<About/>} />
+        <Route exact path="/" element={
+          <div>
+            <WordleFilter change={change} filter={filter} submit={submit} />
+            <div className='wordcount'>
+              <div className='message'>{loading === false ? wordCount : <BeatLoader color="rgba(255, 255, 255, 1)" size={18} loading={loading}/>}</div>
+            </div>
+            <div className='wordlist'>
+              {
+                wordsList.map((word, idx) => {
+                  return (
+                    <WordsList word={word.word} id={idx} wordCount={wordCount}/>
+                  )
+                })
+              }
+            </div>
+          </div>
+        } />
+      </Routes>      
     </div>
   );
 }
