@@ -160,7 +160,6 @@
 @media screen and (max-width: 414px) {
   .App {
     width: 100%;
-    margin: 0 0 0 0;
     background-color: #282c34;
     min-height: 100vh;
     display: flex;
@@ -309,6 +308,15 @@
   
   .word {
     margin: 4%;
+  }
+  
+  .about-page {
+    font-size: calc(10px + 1.5vmin);
+    width: 97%;
+  }
+
+  .about-block {
+    margin: 2% 2% 2% 2%;
   }
 
 }
