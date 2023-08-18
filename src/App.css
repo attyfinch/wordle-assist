@@ -1,168 +1,158 @@
 @media screen and (min-width: 550px) {
+  .App {
+    margin-top: 2.5%;
+    width: 100%;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
 
+  header {
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+  }
 
-}
+  .headerLogo {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-start;
+    font-size: calc(10px + 4vmin);
+    font-weight: bold;
+  }
 
+  .about {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
 
-.App {
-  width: 70%;
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  margin: 1.5% 0% 0% 15%;
-  align-items: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-header {
-  width:  54%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  header img {
+    width: 50%;
+  }
 
-.headerLogo {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: flex-start;
-  font-size: calc(10px + 4vmin);
-  margin: 2%;
-  font-weight: bold;
-}
+  .colorHead {
+    color: #4CAF50;
+  }
 
-.about {
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  margin: 2%;
-}
+  form {
+    margin-top: 15px;
+    width: 550px;
+  }
 
-header img {
-  width: 50%;
-}
-
-.colorHead {
-  color: #4CAF50;
-}
-
-form {
-  margin: 2% 24% 0% 24%;
-}
-
-.position-input {
-  width: 4%;
-  height: 40px;
-  font-size: calc(10px + 1.5vmin);
-  text-align: center;
-  margin-left: 1.5%;
-}
-
-#pos1 {
-  margin-left: 5%;
-}
-
-.include-input {
-  width: 50.5%;
-  height: 40px;
-  font-size: calc(10px + 1.5vmin);
-  margin-left: 2%;
-  margin-top: 3%;
-}
-
-/* Exclusion Section Styling */ 
-.exclude {
-  margin-top: 3%;
-  border: 1px solid white;
-}
-
-h4 {
-  margin: 2% 0% 2% 2%;
-  font-weight: normal;
-}
-
-.excludeAll {
-  margin-bottom: 2%;
-}
-
-.exclude-input {
-  width: 57%;
-  height: 30px;
-  font-size: calc(10px + 1.5vmin);
-  margin-left: 2%;
-  margin-top: 1%;
-}
-
-.excludeByLetter {
-  font-size: calc(10px + 1.5vmin); 
-  margin: 3% 0% 2% 2%;
-}
-
-.exLetter {
-  width: 15%;
-  font-size: calc(10px + 1.5vmin);
-  margin: 0 4.2% 0 2%;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-}
-
-.button {
-  width: 30%;
-  display: flex;
-  flex-wrap: nowrap;
-  margin: 3%;
-  padding: 3%;
-  font-size: calc(10px + 2vmin);
-  font-weight: bold;
-  cursor: pointer;
-  justify-content: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 2.5px rgb(201, 193, 193);
+  .position-input {
+    width: 25px;
+    height: 25px;
+    font-size: calc(10px + 2vmin);
+    text-align: center;
+    margin-left: 10px;
+  }
   
-}
-
-.button:hover {background-color: #4CAF50}
-
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
-.wordcount {
-  display: flex;
-  justify-content: center;
+  #pos1 {
+    margin-left: 10px;
+  }
   
-}
+  .include-input {
+    margin-top: 15px;
+    width: 187px;
+    height: 25px;
+    font-size: calc(10px + 2vmin);
+    margin-top: 10px;
+    margin-left: 10px;
+  }
 
-.wordlist {
-  display: flex;
-  width: 45%;
-  margin-right: 5%;
-  margin-left: 27%;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+  .exclude {
+    margin-top: 20px;
+    border: 1px solid white;
+  }
   
+  h4 {
+    margin: 2% 0% 2% 2%;
+    font-weight: normal;
+  }
+  
+  .excludeAll {
+    margin-bottom: 2%;
+  }
+  
+  .exclude-input {
+    width: 230px;
+    height: 25px;
+    font-size: calc(10px + 2vmin);
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+  
+  .excludeByLetter {
+    font-size: calc(10px + 2vmin); 
+    margin: 10px 0 10px 10px;
+  }
+  
+  .exLetter {
+    width: 80px;
+    font-size: calc(10px + 2vmin);
+    margin: 0 25px 0 10px;
+  }
+  
+  .button-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .button {
+    width: 125px;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 10px;
+    padding: 10px;
+    font-size: calc(10px + 2vmin);
+    font-weight: bold;
+    cursor: pointer;
+    justify-content: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2.5px rgb(201, 193, 193);
+  }
+  
+  .button:hover {background-color: #4CAF50}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  .wordcount {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .wordlist {
+    display: flex;
+    width: 550px;
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .word {
+    margin: 20px;
+  }
+
 }
-
-.word {
-  margin: 4%;
-}
-
-
-
-
-
 
 /* iPhone 14 Pro */
 
@@ -179,7 +169,7 @@ h4 {
     color: white;
   }
   header {
-    width:  97%;
+    width: 97%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -314,7 +304,6 @@ h4 {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    
   }
   
   .word {
