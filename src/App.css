@@ -1,6 +1,6 @@
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 575px) {
   .App {
-    margin-top: 2.5%;
+    margin-top: 10px;
     width: 100%;
     background-color: #282c34;
     min-height: 100vh;
@@ -45,8 +45,8 @@
   }
 
   .position-input {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     font-size: calc(10px + 2vmin);
     text-align: center;
     margin-left: 10px;
@@ -58,8 +58,8 @@
   
   .include-input {
     margin-top: 15px;
-    width: 187px;
-    height: 25px;
+    width: 205px;
+    height: 30px;
     font-size: calc(10px + 2vmin);
     margin-top: 10px;
     margin-left: 10px;
@@ -80,8 +80,8 @@
   }
   
   .exclude-input {
-    width: 230px;
-    height: 25px;
+    width: 325px;
+    height: 30px;
     font-size: calc(10px + 2vmin);
     margin-left: 10px;
     margin-top: 5px;
@@ -93,9 +93,10 @@
   }
   
   .exLetter {
-    width: 80px;
+    height: 30px;
+    width: 100px;
     font-size: calc(10px + 2vmin);
-    margin: 0 25px 0 10px;
+    margin: 0 15px 0 10px;
   }
   
   .button-container {
@@ -239,7 +240,7 @@
   }
   
   .exclude-input {
-    width: 57%;
+    width: 59%;
     height: 20px;
     font-size: calc(10px + 1.5vmin);
     margin-left: 2%;
