@@ -1,7 +1,9 @@
 # WordleAssist
-[WordleAssist](https://wordleassist-137ccebd9892.herokuapp.com/) is an app that I built to help people solve Wordle puzzles. It can be used as a tool to generate ideas for words, as a method for getting unstuck, or as a way to completely cheat the game. It works by taking taking letters to include and exclude, and their positions in the word if known, queries a database of 5 letter words based on the given criteria, and returns all potential correct answers.
+[WordleAssist](https://wordleassist-137ccebd9892.herokuapp.com/) is an app that I built to help people solve Wordle puzzles. It can be used to generate ideas for words, to get unstuck, or completely cheat the game if that's what someone wants to do. It works by taking letters designated for inclusion & exclusion designated by the user, queries a database of 5 letter words based on the given criteria, and returns all potential correct answers.
 
-The idea for WordleAssist was born out of the need to build a project that required all of the material I covered in BloomTech Full Stack Web Development Program. Wordle is a game I'm very familar with. I play it every morning as a way to start the day and get my brain going. Historically, I've lost about 2% of the games I've played. Not bad, but still frustrating. I thought it would be fun to see if I could build something that would eliminate the possiblity of losing while also ruin the game for myself. While I love playing Wordle, building something that could permanently eliminate the possiblity of losing is more fun. I'm happy to report that thus far it lives up to this billing.
+The idea for WordleAssist was born out of the desire to build a project requiring all of the material I covered in the BloomTech Full Stack Web Development Program. Wordle is a game I'm very familar with. I play it every morning as a way to start the day and boot up my brain. Historically, I've lost about 2% of the games I've played. Not bad, but still frustrating. I thought it would be fun and challenging to see if I could build something that would eliminate the possiblity of losing, even if that meant ruining the game for myself in the process. I'm happy to report that thus far it has delivered in this regard.
+
+Included below is info on what I used to build WordleAssist, along with some planned future improvements. While I may have ruined the game for myself, work on this app is not yet done.
 
 ## Upcoming Improvements
 - Support for iPhone 14 Pro Max
@@ -24,7 +26,7 @@ Technically WordleAssist is two separate apps. This repo is the frontend portion
 - Express
 - PostgreSQL
 - Knex
-- [English Words Repo](https://github.com/dwyl/english-words)
+- [English Words Repo](https://github.com/dwyl/english-words) - This app would not be possible w/o this project.
 
 ## Word Recommendation Rankings
 There were two problems I encountered with delivering word recommendations.
@@ -36,3 +38,5 @@ My solution was a word scoring system that devalues obscure and uncommonly used 
 2. How commonly used the word is in the English language. I used GPT 3.5 to obtain this score.
 
 For the most part this scoring system gives me what I want. Word recommendations are better with it than without it, but I do plan on making revisions to improve it further in the coming weeks.
+
+I do not display the scores b/c I do not want this to distract the user. The goal isn't to numerically compare words, it's to solve Wordle Puzzles.
