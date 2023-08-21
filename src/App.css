@@ -156,6 +156,7 @@
   .about-page {
     font-size: calc(10px + 1.5vmin);
     width: 575px;
+    margin-bottom: 50px;
   }
 
   .about-block {
@@ -165,7 +166,6 @@
 }
 
 /* iPhone 14 Pro */
-
 @media screen and (max-width: 414px) {
   .App {
     width: 100%;
