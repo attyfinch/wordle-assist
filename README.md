@@ -11,7 +11,6 @@ Included below is info on what I used to build WordleAssist, along with some pla
 - Light/dark mode toggle
 - Updated word scoring system to improve recommendations
 
-
 ## What I used to build WordleAssist
 Technically WordleAssist is two separate apps. This repo is the frontend portion of the app. For now I'm keeping the backend repo private, but plan to make it public in the coming weeks. Notes on the backend are below.
  

@@ -2,7 +2,7 @@ import React from "react";
 
 
 function WordsList(props) {
-    const { word, id, wordCount} = props;
+    const { word, id} = props;
 
     return (
         <div key={id} className="word">

@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import '../App.css';
 import axios from 'axios';
 import { Route, Routes, Link } from 'react-router-dom'
-import About from './About';
 import BeatLoader from "react-spinners/BeatLoader";
 
 import infoIcon from '../about-50.png'
 
+import About from './About';
 import WordleFilter from './WordleFilter';
 import WordsList from './WordsList';
 
@@ -33,14 +33,13 @@ const initialWordCount = "Submit filter to find available words";
 function App() {
   const [filter, setFilter] = useState(initialFilterValues);
   const [wordsList, setWordsList] = useState(initialWordsList);
-  const [wordCount, setWordCount] = useState(initialWordCount)
+  const [wordCount, setWordCount] = useState(initialWordCount);
   const [loading, setLoading] = useState(false);
 
   function numberFormat(num) {
     let numString = num.toString().split('');
     let finalNum = [];
     for (let i = numString.length-1; i >= 0; i--) {
-      console.log(numString[i])
       if (i === 2 && numString.length === 5) {
         finalNum.unshift(`,${numString[i]}`);
       } else if (i === 1 && numString.length === 4) {
@@ -56,7 +55,6 @@ function App() {
     axios.post(url, wordFilter)
       .then((res) => {
         setLoading(false)
-
         if (res.data.wordsReturned === 0) {
           setWordCount(`No words available based on submitted info`)  
         } else if (res.data.wordsReturned === 1) {
@@ -64,7 +62,6 @@ function App() {
         } else {
           setWordCount(`${numberFormat(res.data.wordsReturned)} available words`)
         }
-
         setWordsList(res.data.wordlist)
       })
       .catch((err) => {
@@ -73,7 +70,7 @@ function App() {
   } 
 
   const change = (name, value) => {
-    // Do form validation here
+    // Form validation will go here
     setFilter({
       ...filter,
       [name]: value
@@ -116,7 +113,6 @@ function App() {
     newFilter.char4Exclude = newFilter.char4Exclude.toUpperCase();
     newFilter.char5Exclude = newFilter.char5Exclude.toUpperCase();
 
-    console.log(newFilter)
     getWords(newFilter)
   }
   
@@ -140,7 +136,7 @@ function App() {
               {
                 wordsList.map((word, idx) => {
                   return (
-                    <WordsList word={word.word} id={idx} wordCount={wordCount}/>
+                    <WordsList word={word.word} id={idx} />
                   )
                 })
               }
