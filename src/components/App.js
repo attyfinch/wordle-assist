@@ -36,19 +36,9 @@ function App() {
   const [wordCount, setWordCount] = useState(initialWordCount);
   const [loading, setLoading] = useState(false);
 
-  function numberFormat(num) {
-    let numString = num.toString().split('');
-    let finalNum = [];
-    for (let i = numString.length-1; i >= 0; i--) {
-      if (i === 2 && numString.length === 5) {
-        finalNum.unshift(`,${numString[i]}`);
-      } else if (i === 1 && numString.length === 4) {
-        finalNum.unshift(`,${numString[i]}`);
-      } else {
-        finalNum.unshift(numString[i]);
-      }
-    }
-    return finalNum.join('')
+  // Function fomrats numbers with commas
+  function numberWithCommas(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
 
   const getWords = (wordFilter) => {
@@ -58,9 +48,9 @@ function App() {
         if (res.data.wordsReturned === 0) {
           setWordCount(`No words available based on submitted info`)  
         } else if (res.data.wordsReturned === 1) {
-          setWordCount(`${numberFormat(res.data.wordsReturned)} available word`)  
+          setWordCount(`${numberWithCommas(res.data.wordsReturned)} available word`)  
         } else {
-          setWordCount(`${numberFormat(res.data.wordsReturned)} available words`)
+          setWordCount(`${numberWithCommas(res.data.wordsReturned)} available words`)
         }
         setWordsList(res.data.wordlist)
       })

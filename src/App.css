@@ -1,3 +1,4 @@
+/* Anything above large phones */
 @media screen and (min-width: 575px) {
   .App {
     margin-top: 10px;
@@ -136,7 +137,6 @@
     margin-top: 15px;
     display: flex;
     justify-content: center;
-    
   }
 
   .wordlist {
@@ -165,7 +165,7 @@
 
 }
 
-/* iPhone 14 Pro */
+/* iPhone 14 Pro Max and Below */
 @media screen and (max-width: 430px) {
   .App {
     width: 100%;
@@ -287,8 +287,7 @@
     background-color: #4CAF50;
     border: none;
     border-radius: 10px;
-    box-shadow: 0 2.5px rgb(201, 193, 193);
-    
+    box-shadow: 0 2.5px rgb(201, 193, 193); 
   }
   
   .button:hover {background-color: #4CAF50}
@@ -302,7 +301,6 @@
   .wordcount {
     display: flex;
     justify-content: center;
-    
   }
 
   .wordlist {
